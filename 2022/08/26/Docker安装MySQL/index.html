@@ -16,23 +16,33 @@
   <meta name="author" content="YuBaiCai">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="在前面的文章中已经介绍了如何在Centos下安装 Docker，本文就不多做介绍。直接开始说如何使用 Docker 安装 MySQL。 拉取镜像和运行拉取MySQL最新镜像1docker pull mysql   注意：这里拉取的是tag为latest的镜像，如果我们想拉取指定版本的镜像，可以使用下面的指令。 1docker pull mysql:5.7  这样就会拉取 5.7 版本的 MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/08/26/hello-world/index.html">
+<meta property="og:title" content="Docker中安装MySQL">
+<meta property="og:url" content="http://example.com/2022/08/26/Docker%E5%AE%89%E8%A3%85MySQL/index.html">
 <meta property="og:site_name" content="SuKa">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在前面的文章中已经介绍了如何在Centos下安装 Docker，本文就不多做介绍。直接开始说如何使用 Docker 安装 MySQL。 拉取镜像和运行拉取MySQL最新镜像1docker pull mysql   注意：这里拉取的是tag为latest的镜像，如果我们想拉取指定版本的镜像，可以使用下面的指令。 1docker pull mysql:5.7  这样就会拉取 5.7 版本的 MySQL">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-26T03:01:06.162Z">
-<meta property="article:modified_time" content="2022-08-26T03:01:06.162Z">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018295.png">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018220.png">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018867.png">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018460.png">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018847.png">
+<meta property="og:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018787.png">
+<meta property="article:published_time" content="2022-08-26T03:56:01.781Z">
+<meta property="article:modified_time" content="2022-08-26T04:01:20.615Z">
 <meta property="article:author" content="YuBaiCai">
+<meta property="article:tag" content="Centos">
+<meta property="article:tag" content="Dorcker">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018295.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hello World - SuKa</title>
+  <title>Docker中安装MySQL - SuKa</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Docker中安装MySQL"></span>
           
         </div>
 
@@ -213,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-26 11:01" pubdate>
-          2022年8月26日 上午
+        <time datetime="2022-08-26 11:56" pubdate>
+          2022年8月26日 中午
         </time>
       </span>
     
@@ -225,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.2k 字
         
       </span>
     
@@ -236,7 +246,7 @@
         
         
         
-          4 分钟
+          19 分钟
         
       </span>
     
@@ -282,24 +292,71 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">Docker中安装MySQL</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <p>在前面的文章中已经介绍了如何在Centos下安装 Docker，本文就不多做介绍。直接开始说如何使用 Docker 安装 MySQL。</p>
+<h2 id="拉取镜像和运行"><a href="#拉取镜像和运行" class="headerlink" title="拉取镜像和运行"></a>拉取镜像和运行</h2><h3 id="拉取MySQL最新镜像"><a href="#拉取MySQL最新镜像" class="headerlink" title="拉取MySQL最新镜像"></a>拉取MySQL最新镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker pull mysql<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018295.png" srcset="/img/loading.gif" lazyload alt="拉取MySQL最新镜像"></p>
+<p>注意：这里拉取的是<code>tag</code>为<code>latest</code>的镜像，如果我们想拉取指定版本的镜像，可以使用下面的指令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker pull mysql:5.7<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>这样就会拉取 5.7 版本的 MySQL了。</p>
+<h3 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run -d --name mysql-dev -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<ul>
+<li>-p 端口映射，格式为：主机(宿主)端口:容器端口</li>
+<li>–name 命名容器名称</li>
+<li>-d 后台运行容器，并返回容器ID</li>
+<li>-e 设置环境变量</li>
+</ul>
+<p>这里我们启动了一个名为 <code>mysql-dev</code> 的 MySQL 镜像，暴露的端口为<code>3306</code>，默认账号密码为： <code>root:123456</code></p>
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018220.png" srcset="/img/loading.gif" lazyload alt="运行MySQL镜像"></p>
+<h3 id="进入MySQL-容器验证"><a href="#进入MySQL-容器验证" class="headerlink" title="进入MySQL 容器验证"></a>进入MySQL 容器验证</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker exec -it mysql-dev /bin/bash<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018867.png" srcset="/img/loading.gif" lazyload alt="进入MySQL容器并登录"></p>
+<p>上图中，我进入了镜像名为<code>mysql-dev</code>的MySQL容器。并通过启动容器的账号密码进行了登录。至此，MySQL 已经启动了，我们可以使用数据库工具（DataGrip、Navicat）来连接这个MySQL。</p>
+<h2 id="数据库工具连接不上问题解决"><a href="#数据库工具连接不上问题解决" class="headerlink" title="数据库工具连接不上问题解决"></a>数据库工具连接不上问题解决</h2><p>通过上面的步骤，MySQL已经启起来了，本地也可以正常连接。但是，当我通过数据库工具进行连接的时候，却发现怎么也无法连接上（这里只关心数据库的问题，默认服务器端口已经开启）,报错<code>1251 - Client does not support authentication protocol</code></p>
+<p>通过排查，发现是没有开启 数据库账号的远程登录权限。可以通过下面的几行指令进行解决。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 授权</span><br><span class="hljs-keyword">grant</span> <span class="hljs-keyword">all</span> <span class="hljs-keyword">on</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br><span class="hljs-comment">-- 刷新权限</span><br>flush privileges;<br></code></pre></td></tr></table></figure>
+
+<p>执行了上面的命令之后，还不能远程访问，因为Navicat只支持旧版本的加密，需要更改mysql的加密规则。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 更改加密规则</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">user</span> root@<span class="hljs-string">&#x27;localhost&#x27;</span> idenified <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;123456&#x27;</span> PASSWORD expire never;<br><span class="hljs-comment">-- 更新root用户密码</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">user</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> idenified <span class="hljs-keyword">with</span> mysql_native_password <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;123456&#x27;</span>;<br><span class="hljs-comment">-- 刷新权限</span><br>flush privileges;<br></code></pre></td></tr></table></figure>
+
+<h2 id="容器使用外挂目录"><a href="#容器使用外挂目录" class="headerlink" title="容器使用外挂目录"></a>容器使用外挂目录</h2><blockquote>
+<p>  请注意使用外挂目录需要在创建容器的时候就指定。</p>
+</blockquote>
+<p>如果说在刚使用 Docker 的时候，叫我给MySQL容器指定外挂目录，我肯定会问为什么。促使我使用 Docker 安装 MySQL 的主要原因就是安装简单，但我似乎忘记了<em>数据的重要性</em>。在经历了一次不小心删除MySQL容器的事故之后，我意识到了这个问题，于是我为新创建的 MySQL 容器外挂目录。</p>
+<h3 id="创建本地目录"><a href="#创建本地目录" class="headerlink" title="创建本地目录"></a>创建本地目录</h3><p>既然要外挂目录，那么就需要在宿主机上面创建一个目录，作为外挂目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir /data/mysql/data   #创建存放数据目录<br>mkdir /data/mysql/conf     #创建存放配置目录<br>cd /data/mysql/conf<br>touch my.cnf  #创建mysql配置文件my.cnf<br>vim my.cnf<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018460.png" srcset="/img/loading.gif" lazyload alt="image-20200623152222384"></p>
+<p>在 <code>my.cnf</code> 中写入下面的数据：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell">[mysql]<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">设置mysql客户端默认字符集</span><br> <br>default-character-set=utf8<br> <br>[mysqld]<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">设置3306端口</span><br> <br>port = 3306<br></code></pre></td></tr></table></figure>
+
+<h3 id="启动MySQL-容器"><a href="#启动MySQL-容器" class="headerlink" title="启动MySQL 容器"></a>启动MySQL 容器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run <br>    -p 3306:3306  <br>    --restart=always <br>    --privileged=true <br>    --name mysql-dev <br>    -v /data/mysql/conf:/etc/mysql/conf.d <br>    -v /data/mysql/data:/var/lib/mysql <br>    -e MYSQL_ROOT_PASSWORD=123456 <br>    -d mysql<br></code></pre></td></tr></table></figure>
+
+<p>上面的命令为了方便各位阅读，如果要执行可以使用下面的指令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run -p 3306:3306  --restart=always --privileged=true --name mysql-dev -v /data/mysql/conf:/etc/mysql/conf.d -v /data/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql<br></code></pre></td></tr></table></figure>
+
+<p>备注：</p>
+<ul>
+<li>-p 端口映射，格式为：主机(宿主)端口:容器端口</li>
+<li>–restart&#x3D;always 设置随服务启动而启动容器</li>
+<li>–name 命名容器名称</li>
+<li>-v 设置挂载点，格式为：主机（宿主）目录：容器目录</li>
+<li>-e 设置环境变量</li>
+<li>-d 后台运行容器，并返回容器ID</li>
+<li>–privileged&#x3D;true 使用该参数，container内的root拥有真正的root权限</li>
+<li>对于已经运行但没设置随docker服务的启动而启动容器的可以执行命令 docker update –restart&#x3D;always 容器名</li>
+</ul>
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018847.png" srcset="/img/loading.gif" lazyload alt="启动容器"></p>
+<p>我们来看看 <code>/data/mysql/data</code>目录下面是否有文件：</p>
+<p><img src="https://gitee.com/yubaicai/blog-image/raw/master/images/202112140018787.png" srcset="/img/loading.gif" lazyload alt="image-20200623153430659"></p>
+<p>可以看到，这么目录下面一句存在了指定文件且时间也正确，也就是说我们外挂成功了。</p>
 
                 
               </div>
@@ -308,6 +365,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Docker/" class="category-chain-item">Docker</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Centos/">#Centos</a>
+      
+        <a href="/tags/Dorcker/">#Dorcker</a>
+      
+        <a href="/tags/MySQL/">#MySQL</a>
+      
+    </div>
   
 </div>
 
@@ -317,8 +406,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2022/08/26/hello-world/</div>
+      <div>Docker中安装MySQL</div>
+      <div>http://example.com/2022/08/26/Docker安装MySQL/</div>
     </div>
     <div class="license-meta">
       
@@ -360,15 +449,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/26/BigDecimal%E8%BF%90%E7%AE%97%E5%B0%81%E8%A3%85/" title="BigDecimal运算封装">
+                      <a href="/2022/08/26/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Docker 目录">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BigDecimal运算封装</span>
+                        <span class="hidden-mobile">Docker 目录</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/08/26/DockerPull%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/" title="Docker 设置阿里云加速">
+                        <span class="hidden-mobile">Docker 设置阿里云加速</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
