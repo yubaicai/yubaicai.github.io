@@ -128,13 +128,6 @@
 
   
   <url>
-    <loc>https://blog.readcode.top/tags/Java/</loc>
-    <lastmod>2022-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.readcode.top/tags/Centos/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -142,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/tags/Dorcker/</loc>
+    <loc>https://blog.readcode.top/tags/Java/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -156,7 +149,7 @@
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/tags/MySQL/</loc>
+    <loc>https://blog.readcode.top/tags/Dorcker/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -171,6 +164,13 @@
   
   <url>
     <loc>https://blog.readcode.top/tags/Minio/</loc>
+    <lastmod>2022-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.readcode.top/tags/MySQL/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -200,14 +200,14 @@
 
   
   <url>
-    <loc>https://blog.readcode.top/categories/Java/</loc>
+    <loc>https://blog.readcode.top/categories/Centos/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/categories/Centos/</loc>
+    <loc>https://blog.readcode.top/categories/Java/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -221,14 +221,14 @@
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/categories/Spring-Boot/</loc>
+    <loc>https://blog.readcode.top/categories/Centos/Docker/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/categories/Centos/Docker/</loc>
+    <loc>https://blog.readcode.top/categories/Spring-Boot/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -242,14 +242,14 @@
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/categories/%E6%AD%A3%E5%88%99/</loc>
+    <loc>https://blog.readcode.top/categories/Spring-Boot/Minio/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.readcode.top/categories/Spring-Boot/Minio/</loc>
+    <loc>https://blog.readcode.top/categories/%E6%AD%A3%E5%88%99/</loc>
     <lastmod>2022-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
